@@ -1,38 +1,79 @@
-# student_list = []
-# max_list = 30
-#
-#
-# print(f"{max_list} students currently registered")
-# while len(student_list) < max_list:
-#     student_name = input("Please enter a name?:")
-#     student_list.append(student_name)
-#     max_list = max_list - 1
-#     print(f"{max_list} students currently registered")
-#
-#
-# if len(student_list) == max_list:
-#     print(student_list)
+# create course class
+class Course:
+    courseName = "Postgraduate in fundamentals of Data Science(Conversion)"
+    courseNumber = "TU257"
+    student_list = ["c1345223", "c1345223", "c1345223"]
+    max_list = 4
 
+    def set_course_info(self, cname, cnumber, slist, mlist):
+        self.courseName = cname
+        self.courseNumber = cnumber
+        self.student_list = slist
+        self.max_list = mlist
+
+
+# create student class
 class Student:
     firstName = ""
-    LastName = ""
+    lastName = ""
+    dob = ""
+    address = ""
+    email = ""
+    mobile = ""
     Student_Number = ""
-    Email = ""
+    status = ""
 
-    def set_student_info(self, fname, lname, number, email):
+    def set_student_info(self, fname, lname, dob, address, email, mobile, studentnumber, status):
         self.firstName = fname
-        self.LastName = lname
-        self.Student_Number = number
-        self.Email = email
+        self.lastName = lname
+        self.dob = dob
+        self.address = address
+        self.email = email
+        self.mobile = mobile
+        self.Student_Number = studentnumber
+        self.status = status
+
+    def print_student(self, fname, lname, dob, address, email, mobile, studentnumber, status):
+        self.firstName = fname
+        self.lastName = lname
+        self.dob = dob
+        self.address = address
+        self.email = email
+        self.mobile = mobile
+        self.Student_Number = studentnumber
+        self.status = status
+        print(self.firstName, self.lastName, self.dob, self.address, self.email, self.mobile, self.Student_Number,
+              self.status)
 
 
+# objects created
 student1 = Student()
-tname = input("whats your name?")
-tlastname = input("whats your lastname?")
-tnumber = input("whats your number")
-temail = input("whats your email?")
-student1.set_student_info(tname, tlastname, tnumber, temail)
-print(student1.firstName)
+student2 = Student()
+student3 = Student()
+student2.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student3.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+
+course_info = Course()
+
+studentlist_len = len(course_info.student_list)
+
+print(f"{studentlist_len} students currently registered")
+while len(course_info.student_list) < course_info.max_list:
+    fname = input("whats your name?")
+    lname = input("whats your lastname?")
+    dob = input("whats your dob?")
+    address = input("whats your address")
+    email = input("whats your email?")
+    mobile = input("whats your mobile?")
+    studentnumber = input("whats your studentnumber?")
+    status = input("whats your status?")
+    student1.set_student_info(fname, lname, dob, address, email, mobile, studentnumber, status)
+    course_info.student_list.append(fname)
+    print(course_info.student_list)
+    course_info.max_list = course_info.max_list - 1
+
+if len(course_info.student_list) == course_info.max_list:
+    print(course_info.student_list)
 
 # Student_1 = Student()
 # Student_1.firstName = "John"
