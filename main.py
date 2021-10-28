@@ -33,17 +33,21 @@ class Student:
         self.Student_Number = studentnumber
         self.status = status
 
-    def print_student(self, fname, lname, dob, address, email, mobile, studentnumber, status):
-        self.firstName = fname
-        self.lastName = lname
-        self.dob = dob
-        self.address = address
-        self.email = email
-        self.mobile = mobile
-        self.Student_Number = studentnumber
-        self.status = status
-        print(self.firstName, self.lastName, self.dob, self.address, self.email, self.mobile, self.Student_Number,
-              self.status)
+        student_array = [self.firstName, self.lastName, self.dob, self.address, self.email, self.mobile,
+                         self.Student_Number, self.status]
+        print(student_array)
+
+    # def print_student(self, fname, lname, dob, address, email, mobile, studentnumber, status):
+    #     self.firstName = fname
+    #     self.lastName = lname
+    #     self.dob = dob
+    #     self.address = address
+    #     self.email = email
+    #     self.mobile = mobile
+    #     self.Student_Number = studentnumber
+    #     self.status = status
+    #     print(self.firstName, self.lastName, self.dob, self.address, self.email, self.mobile, self.Student_Number,
+    #           self.status)
 
 
 # objects created
@@ -52,7 +56,6 @@ student2 = Student()
 student3 = Student()
 student2.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student3.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
-
 course_info = Course()
 
 studentlist_len = len(course_info.student_list)
