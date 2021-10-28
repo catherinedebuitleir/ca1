@@ -33,29 +33,58 @@ class Student:
         self.Student_Number = studentnumber
         self.status = status
 
-        student_array = [self.firstName, self.lastName, self.dob, self.address, self.email, self.mobile,
-                         self.Student_Number, self.status]
-        print(student_array)
+    # use method for printing out the list
+    def show_student_list(self):
+        print(f'{self.firstName},{self.lastName},{self.dob},{self.address},{self.email},{self.mobile},{self.Student_Number},{self.status}')
 
-    # def print_student(self, fname, lname, dob, address, email, mobile, studentnumber, status):
-    #     self.firstName = fname
-    #     self.lastName = lname
-    #     self.dob = dob
-    #     self.address = address
-    #     self.email = email
-    #     self.mobile = mobile
-    #     self.Student_Number = studentnumber
-    #     self.status = status
-    #     print(self.firstName, self.lastName, self.dob, self.address, self.email, self.mobile, self.Student_Number,
-    #           self.status)
+        # student_array = [self.firstName, self.lastName, self.dob, self.address, self.email, self.mobile,
+    #                  self.Student_Number, self.status]
+    # print(student_array)
 
 
 # objects created
 student1 = Student()
 student2 = Student()
 student3 = Student()
+student4 = Student()
+student5 = Student()
+student6 = Student()
+student7 = Student()
+student8 = Student()
+student9 = Student()
+student10 = Student()
+student11 = Student()
+student12 = Student()
+student13 = Student()
+student14 = Student()
+student15 = Student()
+student16 = Student()
+student17 = Student()
+student18 = Student()
+student19 = Student()
+student20 = Student()
+
+student1.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student2.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student3.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student4.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student5.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student6.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student7.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student8.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student9.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student10.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student11.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student12.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student13.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student14.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student15.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student16.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student17.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student18.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student19.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student20.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+
 course_info = Course()
 
 studentlist_len = len(course_info.student_list)
@@ -72,11 +101,28 @@ while len(course_info.student_list) < course_info.max_list:
     status = input("whats your status?")
     student1.set_student_info(fname, lname, dob, address, email, mobile, studentnumber, status)
     course_info.student_list.append(fname)
-    print(course_info.student_list)
     course_info.max_list = course_info.max_list - 1
 
-if len(course_info.student_list) == course_info.max_list:
-    print(course_info.student_list)
+    student1.show_student_list()
+    student2.show_student_list()
+    student3.show_student_list()
+    student4.show_student_list()
+    student5.show_student_list()
+    student6.show_student_list()
+    student7.show_student_list()
+    student8.show_student_list()
+    student9.show_student_list()
+    student10.show_student_list()
+    student11.show_student_list()
+    student12.show_student_list()
+    student13.show_student_list()
+    student14.show_student_list()
+    student15.show_student_list()
+    student16.show_student_list()
+    student17.show_student_list()
+    student18.show_student_list()
+    student19.show_student_list()
+    student20.show_student_list()
 
 # Student_1 = Student()
 # Student_1.firstName = "John"
