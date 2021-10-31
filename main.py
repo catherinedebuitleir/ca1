@@ -1,4 +1,4 @@
-# create course class to storehe student list which will get the length of the list so we can stop the loop.
+# create course class to storhe student list which will get the length of the list so we can stop the loop.
 class Course:
     courseName = "Postgraduate in fundamentals of Data Science(Conversion)"
     courseNumber = "TU257"
