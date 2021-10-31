@@ -43,7 +43,6 @@ class Student:
     # print(student_array)
 
 
-
 # objects created
 student1 = Student()
 student2 = Student()
@@ -74,6 +73,7 @@ student26 = Student()
 student27 = Student()
 student28 = Student()
 student29 = Student()
+student30 = Student()
 student1.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student2.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student3.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
@@ -125,13 +125,11 @@ course_reg = (
     student23.status, student24.status, student25.status, student26.status, student27.status, student28.status,
     student29.status)
 
-
+print(f"Welcome to {course_info.courseName}")
 registered_students = course_reg.count("RE")
 unregistered_students = course_reg.count("EL")
 print(f"{registered_students} students with status of RE")
 print(f"{unregistered_students} students with status of EL")
-
-
 
 course_info.student_list.extend(course_tuple)
 studentlist_len = len(course_info.student_list)
@@ -146,34 +144,22 @@ while len(course_info.student_list) < course_info.max_list:
     mobile = input("whats your mobile?")
     studentnumber = input("whats your studentnumber?")
     status = input("whats your status?")
-    student1.set_student_info(fname, lname, dob, address, email, mobile, studentnumber, status)
+    student30.set_student_info(fname, lname, dob, address, email, mobile, studentnumber, status)
     course_info.student_list.append(fname)
     course_info.max_list = course_info.max_list - 1
     studentlist_len = studentlist_len + 1
     #
 
-
-# Report
+    # Report
     print(f"***{studentlist_len} students currently in class***")
     print(f"***{registered_students} students with status of RE***")
     print(f"***{unregistered_students} students with status of EL***")
-    student1.show_student_list()
-    student2.show_student_list()
-    student3.show_student_list()
-    student4.show_student_list()
-    student5.show_student_list()
-    student6.show_student_list()
-    student7.show_student_list()
-    student8.show_student_list()
-    student9.show_student_list()
-    student10.show_student_list()
-    student11.show_student_list()
-    student12.show_student_list()
-    student13.show_student_list()
-    student14.show_student_list()
-    student15.show_student_list()
-    student16.show_student_list()
-    student17.show_student_list()
-    student18.show_student_list()
-    student19.show_student_list()
-    student20.show_student_list()
+
+    students = [student1, student2, student3, student4, student5, student6, student7, student8, student9, student10,
+                student11,
+                student12, student13, student14, student15, student16, student17, student18, student19, student20,
+                student21, student22, student23,
+                student24, student25, student26, student27, student28, student29]
+    students.append(student1)
+    for student in students:
+        student.show_student_list()
