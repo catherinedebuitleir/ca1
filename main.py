@@ -43,6 +43,7 @@ class Student:
     # print(student_array)
 
 
+
 # objects created
 student1 = Student()
 student2 = Student()
@@ -82,8 +83,8 @@ student6.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.c
 student7.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student8.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student9.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
-student10.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
-student11.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student10.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "EL")
+student11.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "EL")
 student12.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student13.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student14.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
@@ -97,19 +98,44 @@ student21.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com
 student22.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student23.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student24.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
-student25.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
+student25.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "EL")
 student26.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student27.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student28.set_student_info("John", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 student29.set_student_info("Britney", "Smith", "25/05/1990", "Dublin", "f@email.com", "03212222", "c2411333", "RE")
 course_info = Course()
 
-print(course_info.student_list)
-course_tuple = (student1.Student_Number, student2.Student_Number, student3.Student_Number, student4.Student_Number,student5.Student_Number, student6.Student_Number, student7.Student_Number,student8.Student_Number, student9.Student_Number, student10.Student_Number, student11.Student_Number, student12.Student_Number,student13.Student_Number, student14.Student_Number, student15.Student_Number, student16.Student_Number,student17.Student_Number, student18.Student_Number, student19.Student_Number, student20.Student_Number, student21.Student_Number, student22.Student_Number, student23.Student_Number, student24.Student_Number, student25.Student_Number, student26.Student_Number, student27.Student_Number,student28.Student_Number,student29.Student_Number)
+course_tuple = (student1.Student_Number, student2.Student_Number, student3.Student_Number, student4.Student_Number,
+                student5.Student_Number, student6.Student_Number, student7.Student_Number, student8.Student_Number,
+                student9.Student_Number, student10.Student_Number, student11.Student_Number, student12.Student_Number,
+                student13.Student_Number, student14.Student_Number, student15.Student_Number, student16.Student_Number,
+                student17.Student_Number, student18.Student_Number, student19.Student_Number, student20.Student_Number,
+                student21.Student_Number, student22.Student_Number, student23.Student_Number, student24.Student_Number,
+                student25.Student_Number, student26.Student_Number, student27.Student_Number, student28.Student_Number,
+                student29.Student_Number)
+
+# getting number of registered students
+course_reg = (
+    student1.status, student2.status, student3.status, student4.status, student5.status, student6.status,
+    student7.status,
+    student8.status, student9.status, student10.status, student11.status, student12.status, student13.status,
+    student14.status,
+    student15.status, student16.status, student17.status, student18.status, student19.status, student20.status,
+    student21.status, student22.status,
+    student23.status, student24.status, student25.status, student26.status, student27.status, student28.status,
+    student29.status)
+
+
+registered_students = course_reg.count("RE")
+unregistered_students = course_reg.count("EL")
+print(f"{registered_students} students with status of RE")
+print(f"{unregistered_students} students with status of EL")
+
+
+
 course_info.student_list.extend(course_tuple)
-print(course_info.student_list)
 studentlist_len = len(course_info.student_list)
-print(f"{studentlist_len} students currently registered")
+print(f"{studentlist_len} students currently in class")
 
 while len(course_info.student_list) < course_info.max_list:
     fname = input("whats your name?")
@@ -123,8 +149,14 @@ while len(course_info.student_list) < course_info.max_list:
     student1.set_student_info(fname, lname, dob, address, email, mobile, studentnumber, status)
     course_info.student_list.append(fname)
     course_info.max_list = course_info.max_list - 1
+    studentlist_len = studentlist_len + 1
+    #
 
 
+# Report
+    print(f"***{studentlist_len} students currently in class***")
+    print(f"***{registered_students} students with status of RE***")
+    print(f"***{unregistered_students} students with status of EL***")
     student1.show_student_list()
     student2.show_student_list()
     student3.show_student_list()
